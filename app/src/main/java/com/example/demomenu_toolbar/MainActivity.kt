@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
         v: View?,
         menuInfo: ContextMenu.ContextMenuInfo?
     ) {
-        menuInflater.inflate(R.menu.new_menu,menu)
+        menuInflater.inflate(R.menu.context_menu,menu)
         if (menu != null) {
             menu.setHeaderTitle("Choose item")
         }
@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun showPopup(){
         var popup = PopupMenu(this,popupMenu)
-        popup.menuInflater.inflate(R.menu.new_menu,popup.menu)
+        popup.menuInflater.inflate(R.menu.context_menu,popup.menu)
         popup.setOnMenuItemClickListener {
              when(it.itemId){
                  R.id.item1 -> Toast.makeText(this,"This is item 1",Toast.LENGTH_LONG).show()
